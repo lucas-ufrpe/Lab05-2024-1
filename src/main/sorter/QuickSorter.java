@@ -1,4 +1,4 @@
-package main.sorter;
+package sorter;
 
 public class QuickSorter implements Sorter {
     public int[] sort(int[] values) {
@@ -14,14 +14,14 @@ public class QuickSorter implements Sorter {
                 i++;
                 int temp = values[i+1];
                 values[i+1] = values[low];
-                values[low] = temp;
+                values[high] = temp;
                 
             }
         }
         int temp = values[i+1];
-        values[i+1] = values[low];
-        values[low] = temp;
-        return i;
+        values[i+1] = values[high];
+        values[high] = temp;
+        return temp;
     }
     
 }
